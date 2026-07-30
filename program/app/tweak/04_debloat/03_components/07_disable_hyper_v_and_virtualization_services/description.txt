@@ -1,0 +1,1 @@
+﻿Disables Hyper-V hypervisor, virtual machine bus, and guest services to remove virtualization overhead.

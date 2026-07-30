@@ -1,0 +1,2 @@
+powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -Name *communicationsapps*, *HxOutlook*, *HxTsr* -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *windowscommunicationsapps* -ErrorAction SilentlyContinue | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*windowscommunicationsapps*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
+exit /b 0

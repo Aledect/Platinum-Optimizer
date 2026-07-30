@@ -1,0 +1,1 @@
+﻿This configuration disables the virtualization-based memory isolation layer for hardware components, allowing direct memory access without the overhead of security translations and validations.

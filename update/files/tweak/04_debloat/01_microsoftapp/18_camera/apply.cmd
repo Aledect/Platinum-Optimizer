@@ -1,0 +1,2 @@
+powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -Name *WindowsCamera* -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *WindowsCamera* -ErrorAction SilentlyContinue | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*WindowsCamera*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
+exit /b 0

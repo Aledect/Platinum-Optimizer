@@ -1,0 +1,1 @@
+﻿Cloud synchronization client for OneDrive file sync, Files On-Demand, known folder move, and File Explorer cloud integration.

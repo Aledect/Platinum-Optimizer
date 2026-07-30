@@ -1,0 +1,2 @@
+powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -Name *Skype* -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *Microsoft.SkypeApp* -ErrorAction SilentlyContinue | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*Microsoft.SkypeApp*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
+exit /b 0

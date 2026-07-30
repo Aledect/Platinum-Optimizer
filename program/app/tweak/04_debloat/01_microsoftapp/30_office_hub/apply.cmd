@@ -1,0 +1,2 @@
+powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -ErrorAction SilentlyContinue | Where-Object { $_.Path -like '*MicrosoftOfficeHub*' } | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *Microsoft.MicrosoftOfficeHub* | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*Microsoft.MicrosoftOfficeHub*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
+exit /b 0

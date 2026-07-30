@@ -1,0 +1,16 @@
+﻿{
+    "Tweaks":  {
+    "cpu_tweaks/amd|2":  false,
+    "cpu_tweaks/intel|2":  false,
+    "debloat/ms_apps|1":  true,
+    "debloat/ms_apps|2":  true,
+    "debloat/ms_apps|3":  true,
+    "debloat/ms_apps|6":  true,
+    "debloat/ms_apps|8":  true,
+    "services|1":  true,
+    "services|2":  true,
+    "system_tweaks/cleanup|1":  true,
+    "system_tweaks/cleanup|2":  true,
+    "system_tweaks/cleanup|3":  true
+}
+}

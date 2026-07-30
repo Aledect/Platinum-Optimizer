@@ -1,0 +1,1 @@
+This optimization completely disables all background services responsible for collecting diagnostic data, tracking user behavior, and generating error reports for Microsoft.

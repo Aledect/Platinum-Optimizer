@@ -1,0 +1,1 @@
+﻿Completely neutralizes the Windows Error Reporting (WER) framework, crash dump generation, and associated telemetry services to prevent background diagnostic data collection and eliminate disk I/O spikes during application or system failures.

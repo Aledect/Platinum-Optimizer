@@ -1,0 +1,1 @@
+﻿Widgets board and web experience platform that renders news, weather, calendar, and other widget content.

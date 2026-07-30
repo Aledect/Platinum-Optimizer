@@ -1,0 +1,1 @@
+﻿Completely disables all forms of system sleep, hibernation, Fast Startup (Hiberboot), and Modern Standby (S0ix/DRIPS) to ensure the system remains in a fully powered, high-performance state at all times.

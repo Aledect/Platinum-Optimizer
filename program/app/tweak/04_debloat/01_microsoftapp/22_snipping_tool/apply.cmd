@@ -1,0 +1,2 @@
+powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -Name *ScreenSketch*, *SnippingTool* -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *ScreenSketch* -ErrorAction SilentlyContinue | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*ScreenSketch*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
+exit /b 0

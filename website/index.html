@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platinum+ Optimizer Website</title>
+  <link rel="icon" href="image/platinum1.png">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Three.js for 3D Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Anti-Flash of Unstyled Content -->
+  <style>
+    html {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            platinum: {
+              900: '#0B1C2D',
+              950: '#050a0f',
+              800: '#13283E',
+              50: '#F5F7FA',
+              300: '#BFC7D5',
+            },
+            electric: {
+              500: '#1F6FFF',
+              400: '#4dabff',
+              600: '#165bc0',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          backgroundImage: {
+            'hero-pattern': "radial-gradient(circle at 50% 0%, rgba(31, 111, 255, 0.08) 0%, rgba(11, 28, 45, 0) 50%)",
+          },
+          boxShadow: {
+            'glow': '0 0 20px -5px rgba(31, 111, 255, 0.5)',
+            'card': '0 10px 40px -10px rgba(0,0,0,0.5)',
+            'strong-glow': '0 0 30px -5px rgba(31, 111, 255, 0.7)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-platinum-950 text-platinum-50 antialiased font-sans overflow-x-hidden">
+
+  <!-- Page Transition Overlay -->
+  <div id="page-transition" class="page-transition-overlay">
+    <div class="transition-content flex flex-col items-center justify-center">
+      <div class="main-logo-wrapper relative">
+        <img src="image/logo.png" alt="Platinum+ Logo" class="transition-logo w-28 h-28 object-contain filter drop-shadow-[0_0_35px_rgba(31,111,255,0.7)]" draggable="false" oncontextmenu="return false">
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome Popup -->
+  <div id="modal-welcome" class="fixed inset-0 z-[150] flex items-center justify-center p-4 hidden">
+    <div class="modal-backdrop" onclick="closeModal('welcome')"></div>
+    <div
+      class="relative liquid-glass-modal w-full max-w-md flex flex-col items-center justify-center rounded-[3rem] shadow-[0_0_100px_rgba(31,111,255,0.2)] border border-white/10 bg-[#0B1C2D] p-10 gap-4 transform transition-all scale-95 opacity-0"
+      id="welcome-modal-content">
+
+      <button onclick="closeModal('welcome')"
+        class="absolute top-6 right-6 p-2 text-platinum-300 hover:text-white hover:bg-white/10 rounded-full transition-all group">
+        <i data-lucide="x" class="w-5 h-5 group-hover:rotate-90 transition-transform"></i>
+      </button>
+
+      <div class="relative group">
+        <div
+          class="absolute -inset-4 bg-electric-500/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+        </div>
+        <img src="image/platinum1.png" alt="Platinum Logo"
+          class="w-24 h-24 relative z-10 animate-float" draggable="false"
+          oncontextmenu="return false">
+      </div>
+
+      <div class="text-center space-y-2">
+        <h2 class="text-3xl font-serif font-bold text-white tracking-tight" data-i18n="welcome.title">The Platinum+
+          Optimizer program is finally here!!</h2>
+        <p class="text-platinum-300 font-light" data-i18n="welcome.subtitle">Now available, free and open source for
+          everyone</p>
+      </div>
+
+      <div class="flex flex-col w-full gap-4">
+        <button onclick="closeModal('welcome'); scrollToSection('hero-section')"
+          class="w-full py-5 bg-gradient-to-r from-electric-500 to-electric-600 text-white rounded-2xl flex items-center justify-center gap-3 font-bold tracking-widest uppercase text-xs hover:from-electric-400 hover:to-electric-500 hover:scale-[1.05] active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(31,111,255,0.4)] group">
+          <i data-lucide="rocket" class="w-6 h-6 group-hover:scale-125 transition-transform duration-300"></i>
+          <span data-i18n="hero.ctaDownloadExe">Get Started Now</span>
+        </button>
+
+        <button onclick="window.open('https://discord.com/invite/rMZPgAJvPF', '_blank'); closeModal('welcome')"
+          class="w-full py-4 bg-[#5865F2]/10 border border-[#5865F2]/30 text-[#5865F2] hover:text-white hover:border-[#5865F2] rounded-2xl flex items-center justify-center gap-3 font-bold tracking-widest uppercase text-[10px] hover:bg-[#5865F2]/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 group shadow-[0_0_15px_rgba(88,101,242,0.1)] hover:shadow-[0_0_35px_rgba(88,101,242,0.8)]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" fill="currentColor"
+            class="w-6 h-6 group-hover:scale-110 group-hover:-translate-y-0.5 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-300">
+            <path
+              d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a67.58,67.58,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-19.32-72.15ZM42.61,65.59c-5.36,0-9.8-4.83-9.8-10.74s4.36-10.74,9.8-10.74,9.85,4.83,9.8,10.74C52.41,60.76,48.06,65.59,42.61,65.59Zm41.87,0c-5.36,0-9.8-4.83-9.8-10.74s4.36-10.74,9.8-10.74,9.85,4.83,9.8,10.74C84.53,60.76,80.18,65.59,84.48,65.59Z" />
+          </svg>
+          <span data-i18n="welcome.btnDiscord">Join our Discord server</span>
+        </button>
+
+        <button onclick="window.open('https://github.com/Aledect/Platinum-Optimizer', '_blank'); closeModal('welcome')"
+          class="w-full py-4 bg-white/5 border border-white/10 text-platinum-300 hover:text-white hover:bg-white/10 hover:border-white/20 rounded-2xl flex items-center justify-center gap-3 font-bold tracking-widest uppercase text-[10px] hover:scale-[1.02] active:scale-95 transition-all duration-300 group shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.15)]">
+          <img src="image/github.png" alt="GitHub" class="w-6 h-6 object-contain group-hover:scale-110 group-hover:-translate-y-0.5 transition-transform opacity-80 group-hover:opacity-100" />
+          <span>View on GitHub</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Modal -->
+  <div id="modal-privacy" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
+    <div class="modal-backdrop" onclick="closeModal('privacy')"></div>
+    <div
+      class="relative liquid-glass-modal modal-privacy-style w-full max-w-4xl max-h-[90vh] flex flex-col rounded-3xl shadow-2xl border-platinum-800/50">
+      <div class="flex items-center justify-between p-8 border-b border-white/5">
+        <h2 class="text-3xl font-serif font-bold tracking-tight text-white" data-i18n="footer.privacy">Privacy Policy</h2>
+        <button onclick="closeModal('privacy')"
+          class="p-2 text-platinum-300 hover:text-white hover:bg-white/10 rounded-full transition-colors">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="overflow-y-auto p-8 md:p-12 space-y-6 text-platinum-300 font-light leading-relaxed"
+        id="modal-content-privacy">
+      </div>
+      <div class="p-8 border-t border-white/5 flex justify-end">
+        <button onclick="closeModal('privacy')"
+          class="px-8 py-3 bg-electric-500 text-white rounded-full hover:bg-electric-400 transition-all shadow-glow font-medium"
+          data-i18n="footer.closeBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div id="modal-disclaimer" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
+    <div class="modal-backdrop" onclick="closeModal('disclaimer')"></div>
+    <div
+      class="relative liquid-glass-modal modal-disclaimer-style w-full max-w-4xl max-h-[90vh] flex flex-col rounded-3xl shadow-2xl border-platinum-800/50">
+      <div class="flex items-center justify-between p-8 border-b border-white/5">
+        <h2 class="text-3xl font-serif font-bold tracking-tight text-white" data-i18n="footer.legalDisclaimer">Disclaimer</h2>
+        <button onclick="closeModal('disclaimer')"
+          class="p-2 text-platinum-300 hover:text-white hover:bg-white/10 rounded-full transition-colors">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div
+        class="overflow-y-auto p-8 md:p-12 space-y-6 text-platinum-300 font-light leading-relaxed whitespace-pre-line"
+        id="modal-content-disclaimer">
+      </div>
+      <div class="p-8 border-t border-white/5 flex justify-end">
+        <button onclick="closeModal('disclaimer')"
+          class="px-8 py-3 bg-electric-500 text-white rounded-full hover:bg-electric-400 transition-all shadow-glow font-medium"
+          data-i18n="footer.closeBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="modal-lightbox"
+    class="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-12 hidden opacity-0 transition-opacity duration-500 cursor-pointer"
+    onclick="closeLightbox()">
+    <div class="modal-backdrop"></div>
+    <div class="relative w-full h-full flex items-center justify-center p-4">
+      <button onclick="event.stopPropagation(); closeLightbox();"
+        class="absolute top-0 right-0 m-4 md:m-8 p-3 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all z-[210]">
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="Zoomed Image" onclick="event.stopPropagation()"
+        class="max-w-full max-h-full object-contain rounded-2xl shadow-[0_0_100px_rgba(31,111,255,0.2)] transform scale-90 transition-transform duration-500 ease-out cursor-default pointer-events-auto">
+    </div>
+  </div>
+
+  <!-- Floating Navigation -->
+  <nav id="navbar" class="fixed top-6 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-[95%] mx-auto px-4 md:px-6">
+      <div
+        class="relative liquid-glass border border-white/5 rounded-full px-8 py-4 flex items-center justify-between shadow-lg">
+        <div
+          class="text-xl md:text-2xl font-serif font-bold tracking-tight text-white flex items-center gap-4 shrink-0">
+          <img src="image/logo.png" alt="Platinum+ Logo" loading="eager" decoding="async"
+            class="h-12 w-12 object-contain"
+            style="image-rendering: -webkit-optimize-contrast; image-rendering: high-quality; transform: translateZ(0.1px); backface-visibility: hidden; -webkit-font-smoothing: antialiased;"
+            draggable="false" oncontextmenu="return false" />
+          <span class="whitespace-nowrap">Platinum+ Optimizer</span>
+        </div>
+
+        <!-- Desktop Menu (Dynamically Centered) -->
+        <div id="nav-menu-container"
+          class="hidden lg:flex items-center space-x-1 text-sm font-medium text-platinum-300 absolute left-1/2 -translate-x-1/2 px-1 py-1 z-10">
+          <div id="nav-blob" class="absolute pointer-events-none opacity-0 scale-75 transition-all duration-500 z-0">
+          </div>
+          <button onclick="scrollToSection('hero-section')"
+            class="px-4 py-2 rounded-full hover:text-white transition-all" data-i18n="nav.home">Home</button>
+          <button onclick="scrollToSection('features')" class="px-4 py-2 rounded-full hover:text-white transition-all"
+            data-i18n="nav.about">What is</button>
+          <button onclick="scrollToSection('target')"
+            class="px-4 py-2 rounded-full hover:bg-white/5 hover:text-white transition-all" data-i18n="nav.target">For
+            Whom</button>
+          <button onclick="scrollToSection('activation')" class="px-4 py-2 rounded-full hover:text-white transition-all"
+            data-i18n="nav.howItWorks">Guide</button>
+          <button onclick="scrollToSection('faq')" class="px-4 py-2 rounded-full hover:text-white transition-all"
+            data-i18n="nav.faq">FAQ</button>
+          <a href="wallpaper.html" id="nav-wallpaper-btn"
+            class="px-4 py-2 rounded-full hover:text-white transition-all flex items-center gap-2 group/nav">
+            <span data-i18n="nav.wallpaper">Wallpaper</span>
+          </a>
+        </div>
+
+        <!-- Right Header Area (Wiki Button & Language Selector) -->
+        <div class="flex items-center gap-3">
+          <a href="../wiki/index.html" class="language-selector flex items-center gap-2.5 cursor-pointer group" style="text-decoration:none;">
+            <img src="image/book.png" alt="Wiki" class="w-4 h-4 object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
+            <span class="lang-text font-semibold">Wiki</span>
+            <span class="px-2 py-0.5 bg-electric-500 text-[10px] font-bold rounded-md animate-pulse text-white uppercase tracking-wider">NEW</span>
+          </a>
+
+          <div class="custom-lang-wrapper notranslate" translate="no" title="Translate Site">
+            <div class="language-selector" id="lang-selector-btn">
+              <i data-lucide="globe" class="lang-icon"></i>
+              <span class="lang-text" id="lang-display-text">English</span>
+              <i data-lucide="chevron-down" class="lang-chevron"></i>
+            </div>
+            
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu"></div>
+
+            <select id="custom-lang-selector" aria-label="Select Language">
+              <optgroup label="Common">
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="zh-CN">中文 (简体)</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="pt">Português</option>
+                <option value="ru">Русский</option>
+              </optgroup>
+              <optgroup label="Europe">
+                <option value="sq">Shqip</option>
+                <option value="hy">Հայերեն</option>
+                <option value="eu">Euskara</option>
+                <option value="be">Беларуская</option>
+                <option value="bs">Bosanski</option>
+                <option value="bg">Български</option>
+                <option value="ca">Català</option>
+                <option value="hr">Hrvatski</option>
+                <option value="cs">Čeština</option>
+                <option value="da">Dansk</option>
+                <option value="nl">Nederlands</option>
+                <option value="et">Eesti</option>
+                <option value="fi">Suomi</option>
+                <option value="gl">Galego</option>
+                <option value="ka">ქართული</option>
+                <option value="el">Ελληνικά</option>
+                <option value="hu">Magyar</option>
+                <option value="is">Íslenska</option>
+                <option value="ga">Gaeilge</option>
+                <option value="lv">Latviešu</option>
+                <option value="lt">Lietuvių</option>
+                <option value="lb">Lëtzebuergesch</option>
+                <option value="mk">Македонски</option>
+                <option value="mt">Malti</option>
+                <option value="no">Norsk</option>
+                <option value="pl">Polski</option>
+                <option value="ro">Română</option>
+                <option value="gd">Gàidhlig</option>
+                <option value="sr">Српски</option>
+                <option value="sk">Slovenčina</option>
+                <option value="sl">Slovenščina</option>
+                <option value="sv">Svenska</option>
+                <option value="uk">Українська</option>
+                <option value="cy">Cymraeg</option>
+                <option value="yi">ייִדיש</option>
+              </optgroup>
+              <optgroup label="Asia & Pacific">
+                <option value="af">Afrikaans</option>
+                <option value="am">አማርኛ</option>
+                <option value="az">Azərbaycan</option>
+                <option value="bn">বাংলা</option>
+                <option value="ceb">Cebuano</option>
+                <option value="zh-TW">中文 (繁體)</option>
+                <option value="tl">Filipino</option>
+                <option value="gu">ગુજરાતી</option>
+                <option value="hi">हिन्दी</option>
+                <option value="hmn">Hmong</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="jw">Jawa</option>
+                <option value="kn">ಕನ್ನಡ</option>
+                <option value="kk">Қазақ тілі</option>
+                <option value="km">ខ្មែរ</option>
+                <option value="ky">Кыргызча</option>
+                <option value="lo">ລາວ</option>
+                <option value="ms">Bahasa Melayu</option>
+                <option value="ml">മലയാളം</option>
+                <option value="mi">Maori</option>
+                <option value="mr">मराठी</option>
+                <option value="mn">Монгол</option>
+                <option value="my">မြန်မာ</option>
+                <option value="ne">नेपाली</option>
+                <option value="or">ଓଡ଼ିଆ</option>
+                <option value="pa">ਪੰਜਾਬੀ</option>
+                <option value="sm">Samoan</option>
+                <option value="si">සිංහල</option>
+                <option value="su">Sunda</option>
+                <option value="tg">Тоҷикӣ</option>
+                <option value="ta">தமிழ்</option>
+                <option value="tt">Татар</option>
+                <option value="te">తెలుగు</option>
+                <option value="th">ไทย</option>
+                <option value="tk">Türkmençe</option>
+                <option value="uz">O'zbek</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="haw">Hawaiian</option>
+              </optgroup>
+              <optgroup label="Middle East & Africa">
+                <option value="ar">العربية</option>
+                <option value="ny">Chichewa</option>
+                <option value="ha">Hausa</option>
+                <option value="iw">עברית</option>
+                <option value="ig">Igbo</option>
+                <option value="ku">Kurdî</option>
+                <option value="mg">Malagasy</option>
+                <option value="ps">پښتو</option>
+                <option value="fa">فارسی</option>
+                <option value="st">Sesotho</option>
+                <option value="sn">Shona</option>
+                <option value="sd">سنڌي</option>
+                <option value="so">Soomaali</option>
+                <option value="sw">Kiswahili</option>
+                <option value="tr">Türkçe</option>
+                <option value="ur">اردو</option>
+                <option value="ug">ئۇيغۇرچە</option>
+                <option value="xh">Xhosa</option>
+                <option value="yo">Yorùbá</option>
+                <option value="zu">Zulu</option>
+              </optgroup>
+              <optgroup label="Americas">
+                <option value="ht">Kreyòl Ayisyen</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="eo">Esperanto</option>
+                <option value="la">Latina</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <button class="md:hidden text-white p-2 rounded-full hover:bg-white/10" onclick="toggleMobileMenu()">
+            <i data-lucide="menu" id="mobile-menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute top-full left-4 right-4 mt-2 glass rounded-3xl p-6 flex-col space-y-2 shadow-2xl backdrop-blur-xl">
+      <button onclick="scrollToSection('hero-section')"
+        class="text-left px-4 py-3 rounded-xl text-platinum-300 hover:text-white hover:bg-white/5 transition-colors"
+        data-i18n="nav.home">Home</button>
+      <button onclick="scrollToSection('features')"
+        class="text-left px-4 py-3 rounded-xl text-platinum-300 hover:text-white hover:bg-white/5 transition-colors"
+        data-i18n="nav.about">What is</button>
+      <button onclick="scrollToSection('target')"
+        class="text-left px-4 py-3 rounded-xl text-platinum-300 hover:text-white hover:bg-white/5 transition-colors"
+        data-i18n="nav.target">For Whom</button>
+      <button onclick="scrollToSection('activation')"
+        class="text-left px-4 py-3 rounded-xl text-platinum-300 hover:text-white hover:bg-white/5 transition-colors"
+        data-i18n="nav.howItWorks">Guide</button>
+      <button onclick="scrollToSection('faq')"
+        class="text-left px-4 py-3 rounded-xl text-platinum-300 hover:text-white hover:bg-white/5 transition-colors"
+        data-i18n="nav.faq">FAQ</button>
+      <a href="wallpaper.html"
+        class="text-left px-4 py-3 rounded-xl text-platinum-300 hover:text-white hover:bg-white/5 transition-colors flex items-center justify-between">
+        <span data-i18n="nav.wallpaper">Wallpaper</span>
+      </a>
+      <a href="../wiki/index.html" class="wiki-mobile-btn">
+        <img src="image/book.png" alt="Wiki" />
+        <span>Wiki</span>
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- Global Animated Background -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-platinum-950">
+    <div class="absolute inset-0 bg-global-glow opacity-80 mix-blend-screen"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
+    <div id="global-animation-container" class="absolute inset-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-platinum-950/50 to-platinum-950/80"></div>
+  </div>
+
+  <!-- Hero Section (HOME) -->
+  <div id="hero-section" class="relative z-10 pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden px-4">
+    <div class="max-w-7xl mx-auto px-4 relative z-10 text-center pointer-events-auto">
+
+      <h1
+        class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-3 text-white tracking-tight drop-shadow-2xl reveal-on-scroll reveal-delay-100"
+        data-i18n="hero.headline"></h1>
+      <p class="text-lg md:text-xl text-platinum-300 mb-10 leading-relaxed font-light max-w-3xl mx-auto reveal-on-scroll reveal-delay-200"
+        data-i18n="hero.subheadline"></p>
+
+      <!-- Central 3D Mockup -->
+      <div class="relative max-w-[1200px] mx-auto reveal-on-scroll reveal-delay-400 mt-32 mb-16"
+        style="perspective: 2500px;">
+        <div id="hero-3d-mockup" class="relative group cursor-zoom-in rounded-[2rem]"
+          onclick="openLightbox('image/1.png', this)"
+          style="transform-style: preserve-3d; transform: rotateX(6deg) rotateY(10deg) rotateZ(-2deg) scale(1.15); box-shadow: 0 30px 100px rgba(31,111,255,0.25);">
+          <div
+            class="absolute -inset-2 bg-gradient-to-b from-electric-500 to-transparent rounded-[2rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-700 pointer-events-none"
+            style="transform: translateZ(-50px);"></div>
+          <div class="relative rounded-[2rem] overflow-hidden glass modern-frame border border-electric-500/40"
+            style="isolation: isolate;">
+            <img src="image/1.png" alt="Platinum+ Optimizer Interface" loading="eager" decoding="async"
+              class="w-full h-auto object-contain opacity-100 rounded-[2rem]" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-platinum-950/80 via-transparent to-transparent pointer-events-none">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons Parallax Wrapper -->
+      <div id="hero-buttons-parallax">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-5 reveal-on-scroll reveal-delay-400 pointer-events-auto mt-32"
+          style="--reveal-dist: 10px;">
+
+          <button onclick="scrollToSection('activation')"
+            class="relative overflow-hidden w-full sm:w-auto shadow-[0_0_20px_rgba(31,111,255,0.4)] inline-flex items-center justify-center px-10 py-4 text-base font-semibold rounded-full transition-all duration-500 ease-out focus:outline-none focus-visible:ring-4 focus-visible:ring-electric-500/30 bg-electric-500 text-white hover:bg-electric-400 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(31,111,255,0.7)] active:scale-95 group border border-electric-400/50">
+            <div
+              class="absolute inset-0 bg-white/20 translate-x-[-150%] group-hover:translate-x-[150%] transition-transform duration-700 ease-in-out skew-x-12 pointer-events-none">
+            </div>
+            <i data-lucide="rocket"
+              class="relative z-10 mr-3 w-6 h-6 transition-transform duration-300 group-hover:scale-110"></i>
+            <span data-i18n="hero.ctaDownloadExe" class="relative z-10 tracking-wide">Get Started Now</span>
+          </button>
+
+          <button onclick="window.location.href='../wiki/index.html'"
+            class="relative overflow-hidden w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 text-base font-semibold rounded-full transition-all duration-500 ease-out focus:outline-none focus-visible:ring-4 focus-visible:ring-white/10 bg-white/5 border border-white/10 text-platinum-300 hover:text-white hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] hover:-translate-y-1 active:scale-95 group">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mr-3 w-6 h-6 transition-transform duration-300 group-hover:-translate-y-0.5">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+            </svg>
+            <span data-i18n="hero.ctaLearn" class="tracking-wide">Read the Wiki</span>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- What is it (ABOUT) -->
+  <section id="features" class="py-32 relative z-10 overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-8 relative z-10">
+      <div
+        class="relative glass p-10 md:p-16 lg:p-20 rounded-[2.5rem] shadow-[0_0_80px_rgba(31,111,255,0.1)] border border-white/10 hover:border-electric-500/30 transition-colors duration-700 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center w-full">
+
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+          <div class="text-center lg:text-left mb-12">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white reveal-on-scroll tracking-tight"
+              data-i18n="about.title">What is Platinum+ Optimizer</h2>
+            <div
+              class="w-24 h-1.5 bg-electric-500 rounded-full mx-auto lg:mx-0 mt-8 reveal-on-scroll reveal-delay-100 shadow-[0_0_15px_rgba(31,111,255,0.6)]">
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <p class="text-platinum-200 text-lg md:text-xl leading-relaxed font-light reveal-on-scroll reveal-delay-200 text-center lg:text-left"
+              data-i18n="about.description1"></p>
+
+            <p class="text-platinum-200 text-lg md:text-xl leading-relaxed font-light reveal-on-scroll reveal-delay-300 text-center lg:text-left"
+              data-i18n="about.description2"></p>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 relative flex justify-center items-center perspective-1000"
+          id="nvidia-interactive-container">
+
+          <svg id="animated-mouse-cursor" class="absolute z-50 w-16 h-16 drop-shadow-2xl opacity-0 pointer-events-none"
+            viewBox="0 0 24 24" fill="none"
+            style="top: 0; left: 0; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.8)); transform-origin: top left; transform: translate(150px, 150px);">
+            <path d="M4.326 2L19.25 15.688L12.333 16.516L16.035 22.062L13.111 23.953L9.5 18.528L4.326 23.332V2Z"
+              fill="white" stroke-linejoin="round" />
+          </svg>
+
+          <div class="flex flex-col gap-4 w-full max-w-[600px] relative z-30">
+            <div id="tweak-row-card-1"
+              class="tweak-row-card relative flex flex-row items-center justify-between w-full p-5 rounded-xl border border-white/5 bg-[#121A2A] shadow-lg transition-colors duration-300">
+              <div class="flex flex-col">
+                <div class="flex flex-row items-center mb-2">
+                  <h3 class="text-white text-[16px] font-bold font-sans">Optimize GPU Priority</h3>
+                  <div
+                    class="ml-3 flex items-center justify-center w-[18px] h-[18px] rounded-full bg-white/5 text-[#7B8498] text-[11px] cursor-help">
+                    ?</div>
+                </div>
+                <p class="text-[#7B8498] text-[13px] font-sans">Forces Windows to prioritize GPU resources for games and
+                  high-performance applications.</p>
+              </div>
+              <div id="tweak-toggle-wrapper-1" class="relative flex-shrink-0 ml-6 cursor-pointer group">
+                <div id="tweak-toggle-track-1" class="tweak-toggle-track w-[42px] h-[24px] bg-[#1E2332] rounded-full">
+                </div>
+                <div id="tweak-toggle-thumb-1"
+                  class="tweak-toggle-thumb absolute top-[4px] left-[4px] w-[16px] h-[16px] bg-[#7B8498] rounded-full shadow-sm">
+                </div>
+              </div>
+            </div>
+
+            <div id="tweak-row-card-2"
+              class="tweak-row-card relative flex flex-row items-center justify-between w-full p-5 rounded-xl border border-white/5 bg-[#121A2A] shadow-lg transition-colors duration-300">
+              <div class="flex flex-col">
+                <div class="flex flex-row items-center mb-2">
+                  <h3 class="text-white text-[16px] font-bold font-sans">Disable Background Telemetry</h3>
+                  <div
+                    class="ml-3 flex items-center justify-center w-[18px] h-[18px] rounded-full bg-white/5 text-[#7B8498] text-[11px] cursor-help">
+                    ?</div>
+                </div>
+                <p class="text-[#7B8498] text-[13px] font-sans">Halts unnecessary Windows telemetry services to free up
+                  CPU cycles and network bandwidth.</p>
+              </div>
+              <div id="tweak-toggle-wrapper-2" class="relative flex-shrink-0 ml-6 cursor-not-allowed group">
+                <div id="tweak-toggle-track-2" class="tweak-toggle-track w-[42px] h-[24px] bg-[#1E2332] rounded-full">
+                </div>
+                <div id="tweak-toggle-thumb-2"
+                  class="tweak-toggle-thumb absolute top-[4px] left-[4px] w-[16px] h-[16px] bg-[#7B8498] rounded-full shadow-sm">
+                </div>
+              </div>
+            </div>
+
+            <div id="tweak-row-card-3"
+              class="tweak-row-card relative flex flex-row items-center justify-between w-full p-5 rounded-xl border border-white/5 bg-[#121A2A] shadow-lg transition-colors duration-300">
+              <div class="flex flex-col">
+                <div class="flex flex-row items-center mb-2">
+                  <h3 class="text-white text-[16px] font-bold font-sans">Maximize CPU Performance</h3>
+                  <div
+                    class="ml-3 flex items-center justify-center w-[18px] h-[18px] rounded-full bg-white/5 text-[#7B8498] text-[11px] cursor-help">
+                    ?</div>
+                </div>
+                <p class="text-[#7B8498] text-[13px] font-sans">Disables core parking and sets power plan to ultimate
+                  performance for maximum frame rates.</p>
+              </div>
+              <div id="tweak-toggle-wrapper-3" class="relative flex-shrink-0 ml-6 cursor-pointer group">
+                <div id="tweak-toggle-track-3" class="tweak-toggle-track w-[42px] h-[24px] bg-[#1E2332] rounded-full">
+                </div>
+                <div id="tweak-toggle-thumb-3"
+                  class="tweak-toggle-thumb absolute top-[4px] left-[4px] w-[16px] h-[16px] bg-[#7B8498] rounded-full shadow-sm">
+                </div>
+              </div>
+            </div>
+
+            <div id="tweak-row-card-4"
+              class="tweak-row-card relative flex flex-row items-center justify-between w-full p-5 rounded-xl border border-white/5 bg-[#121A2A] shadow-lg transition-colors duration-300">
+              <div class="flex flex-col">
+                <div class="flex flex-row items-center mb-2">
+                  <h3 class="text-white text-[16px] font-bold font-sans">Enable Ultimate Game Mode</h3>
+                  <div
+                    class="ml-3 flex items-center justify-center w-[18px] h-[18px] rounded-full bg-white/5 text-[#7B8498] text-[11px] cursor-help">
+                    ?</div>
+                </div>
+                <p class="text-[#7B8498] text-[13px] font-sans">Configures the operating system to allocate maximum I/O
+                  and RAM to fullscreen applications.</p>
+              </div>
+              <div id="tweak-toggle-wrapper-4" class="relative flex-shrink-0 ml-6 cursor-pointer group">
+                <div id="tweak-toggle-track-4" class="tweak-toggle-track w-[42px] h-[24px] bg-[#1E2332] rounded-full">
+                </div>
+                <div id="tweak-toggle-thumb-4"
+                  class="tweak-toggle-thumb absolute top-[4px] left-[4px] w-[16px] h-[16px] bg-[#7B8498] rounded-full shadow-sm">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Audience (FOR WHOM) -->
+  <section id="target" class="py-24 md:py-32 relative z-10 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-electric-500/5 via-transparent to-electric-500/5 pointer-events-none">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+      <div class="text-center mb-20 reveal-on-scroll">
+        <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-white" data-i18n="target.title">Who is it for</h2>
+        <p class="text-platinum-300 text-lg max-w-2xl mx-auto" data-i18n="target.subtitle"></p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 scale-up-on-scroll" id="target-items-container"></div>
+    </div>
+  </section>
+
+  <!-- Download & Execution (GUIDE) -->
+  <section id="activation" class="py-24 md:py-32 relative z-10 overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-8 relative z-10">
+
+      <div class="relative glass p-10 md:p-16 lg:p-20 rounded-[2.5rem] shadow-[0_0_80px_rgba(31,111,255,0.1)] border border-white/10 hover:border-electric-500/30 transition-colors duration-700 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center w-full scale-up-on-scroll">
+
+        <!-- Left Side: Titles and Steps -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+          <div class="text-center lg:text-left mb-12">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white tracking-tight mb-4">Quick Installation</h2>
+            <p class="text-platinum-300 text-lg md:text-xl leading-relaxed font-light">
+              Install Platinum+ Optimizer effortlessly with our automated PowerShell script. No manual downloads.
+            </p>
+            <div class="w-24 h-1.5 bg-electric-500 rounded-full mx-auto lg:mx-0 mt-8 shadow-[0_0_15px_rgba(31,111,255,0.6)]"></div>
+          </div>
+
+          <div class="space-y-8">
+            <div class="flex gap-6 group">
+              <div class="shrink-0 w-12 flex justify-center text-4xl font-serif font-bold text-electric-500/40 group-hover:text-electric-500 transition-colors duration-300">01</div>
+              <div class="pt-1">
+                <h3 class="text-lg font-bold text-white mb-1">Open PowerShell (Admin)</h3>
+                <p class="text-platinum-300 text-sm leading-relaxed font-light">Search for PowerShell in Start and select "Run as Administrator".</p>
+              </div>
+            </div>
+            <div class="flex gap-6 group">
+              <div class="shrink-0 w-12 flex justify-center text-4xl font-serif font-bold text-electric-500/40 group-hover:text-electric-500 transition-colors duration-300">02</div>
+              <div class="pt-1">
+                <h3 class="text-lg font-bold text-white mb-1">Execute Command</h3>
+                <p class="text-platinum-300 text-sm leading-relaxed font-light">Copy the script command from the panel, paste it, and press <kbd class="bg-white/10 px-1.5 rounded text-white">Enter</kbd>.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 group">
+              <div class="shrink-0 w-12 flex justify-center text-4xl font-serif font-bold text-electric-500/40 group-hover:text-electric-500 transition-colors duration-300">03</div>
+              <div class="pt-1">
+                <h3 class="text-lg font-bold text-white mb-1">Follow Setup</h3>
+                <p class="text-platinum-300 text-sm leading-relaxed font-light">The automated installer will initialize and guide you through.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center lg:text-left">
+            <a href="../wiki/index.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-medium transition-all group shadow-lg w-full sm:w-auto justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+              </svg>
+              Read the Guided Wiki
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: The Professional Code Box -->
+        <div class="w-full lg:w-1/2 relative flex justify-center items-center perspective-1000">
+          <div class="relative w-full max-w-[600px] p-6 md:p-8 rounded-3xl border border-electric-500/20 bg-gradient-to-b from-[#0B1220] to-[#0A0F1A] shadow-[0_0_50px_rgba(31,111,255,0.15)] group transition-all duration-500 hover:shadow-[0_0_80px_rgba(31,111,255,0.25)] hover:border-electric-500/40">
+             <div class="absolute inset-0 bg-electric-500/5 blur-3xl rounded-full pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-700"></div>
+
+             <h3 class="text-white text-lg font-bold mb-6 flex items-center gap-3 relative z-10">
+               <img src="image/powershell.png" alt="PowerShell" class="w-8 h-8 object-contain drop-shadow-lg">
+               Installation Script
+             </h3>
+
+             <div class="relative w-full p-5 md:p-6 rounded-2xl border border-white/5 bg-[#121A2A] shadow-inner flex flex-col gap-4 z-10">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-white/5 pb-4 gap-4">
+                  <div class="text-xs font-mono text-platinum-400 flex items-center gap-2">
+                    Administrator: PowerShell
+                  </div>
+                  <button onclick="copyInstallCommand(this)" class="px-3 py-1.5 bg-white/[0.03] hover:bg-electric-500/10 border border-white/10 hover:border-electric-400 text-slate-400 hover:text-white rounded-lg flex items-center gap-1.5 transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_0_12px_rgba(38,146,210,0.2)] hover:-translate-y-[1px] active:scale-95 group/btn shrink-0 w-full sm:w-auto justify-center backdrop-blur-sm">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                    <span class="text-[0.75rem] font-sans font-medium btn-text">Copy</span>
+                  </button>
+                </div>
+                <div class="overflow-x-auto pt-2 pb-2 scrollbar-hide">
+                  <div class="flex items-center gap-3">
+                    <span class="text-electric-500 font-mono text-sm md:text-base select-none">PS></span>
+                    <code class="text-white whitespace-nowrap font-mono text-sm md:text-base font-medium select-all" id="install-command">irm https://platinum.optimizer.workers.dev/program | iex</code>
+                  </div>
+                </div>
+             </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Questions -->
+  <section id="faq" class="py-24 md:py-32 relative z-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+      <div class="text-center mb-20 reveal-on-scroll">
+        <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-white" data-i18n="faq.title">Common Questions</h2>
+        <p class="text-platinum-300 text-lg max-w-3xl mx-auto" data-i18n="faq.subtitle">Answers to the most common questions about optimization</p>
+      </div>
+      <div class="w-full max-w-4xl mx-auto space-y-5 reveal-on-scroll reveal-delay-200" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 py-24 overflow-hidden">
+    <div class="relative max-w-[100rem] mx-auto px-4 md:px-6">
+      <div
+        class="bg-[#081522]/70 backdrop-blur-2xl rounded-[3rem] md:rounded-[4rem] p-8 md:p-14 border border-white/10 shadow-strong-glow flex flex-col gap-12 md:gap-16 relative">
+
+        <!-- Top Section: Brand Bar -->
+        <div class="flex items-center justify-between pb-10 border-b border-white/5">
+          <div class="flex items-center gap-4 shrink-0">
+            <span class="text-xl md:text-2xl font-serif font-bold text-white tracking-[0.25em] uppercase">Platinum+ Optimizer</span>
+          </div>
+        </div>
+
+        <!-- Middle Section: Creators & Actions -->
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Creators Column -->
+          <div class="space-y-6 reveal-on-scroll">
+            <div class="footer-section-header">
+              <h4 data-i18n="footer.creators">Creators</h4>
+              <div class="line"></div>
+            </div>
+
+            <div class="grid gap-3">
+              <!-- Stefano -->
+              <a href="#"
+                onclick="openSocialModal('Stefano'); return false;"
+                class="creator-card group">
+                <div class="icon-wrapper">
+                  <div class="absolute inset-0 bg-gradient-to-tr from-electric-600/20 to-transparent"></div>
+                  <i data-lucide="user"
+                    class="w-5 h-5 text-electric-400 group-hover:text-electric-300 relative z-10 transition-colors"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-white text-xs font-bold uppercase tracking-widest mb-0.5 group-hover:text-electric-400 transition-colors">
+                    @STEFANO83223</p>
+                  <span class="text-[9px] text-platinum-400 font-medium tracking-widest uppercase"
+                    data-i18n="footer.credits.owner">Owner & Tweak Dev</span>
+                </div>
+                <i data-lucide="arrow-right"
+                  class="w-4 h-4 ml-auto text-platinum-600 group-hover:text-electric-400 group-hover:translate-x-1 transition-all opacity-0 group-hover:opacity-100"></i>
+              </a>
+
+              <!-- Ale -->
+              <a href="#"
+                onclick="openSocialModal('Aledect'); return false;"
+                class="creator-card group">
+                <div class="icon-wrapper">
+                  <div class="absolute inset-0 bg-gradient-to-tr from-electric-600/20 to-transparent"></div>
+                  <i data-lucide="user"
+                    class="w-5 h-5 text-electric-400 group-hover:text-electric-300 relative z-10 transition-colors"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-white text-xs font-bold uppercase tracking-widest mb-0.5 group-hover:text-electric-400 transition-colors">
+                    @Aledect</p>
+                  <span class="text-[9px] text-platinum-400 font-medium tracking-widest uppercase">Owner & Manager</span>
+                </div>
+                <i data-lucide="arrow-right"
+                  class="w-4 h-4 ml-auto text-platinum-600 group-hover:text-electric-400 group-hover:translate-x-1 transition-all opacity-0 group-hover:opacity-100"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Support & Community Column -->
+          <div class="space-y-6 reveal-on-scroll reveal-delay-200">
+            <div class="footer-section-header">
+              <h4 data-i18n="footer.support">Support & Community</h4>
+              <div class="line"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+                <a href="https://discord.com/invite/rMZPgAJvPF" target="_blank" class="footer-btn btn-bug group">
+                  <img src="image/discord.png" alt="Discord" class="w-5 h-5 object-contain group-hover:scale-110 transition-transform opacity-80 group-hover:opacity-100">
+                  <span>Join Discord</span>
+                </a>
+
+                <a href="https://t.me/+AKZO7Y5buhw0ZjRk" target="_blank" class="footer-btn btn-telegram group">
+                  <img src="image/telegram.png" alt="Telegram" class="w-5 h-5 object-contain group-hover:scale-110 transition-transform opacity-80 group-hover:opacity-100">
+                  <span data-i18n="footer.telegramBtn">Join Telegram</span>
+                </a>
+
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=platinumoptimizerhelp@gmail.com&tf=cm" target="_blank" class="footer-btn group">
+                  <img src="image/email.png" alt="Email" class="w-5 h-5 object-contain group-hover:scale-110 transition-transform opacity-80 group-hover:opacity-100">
+                  <span data-i18n="footer.emailSupportBtn">Email Support</span>
+                </a>
+
+                <a href="https://ko-fi.com/platinumoptimizer" target="_blank" class="footer-btn btn-donate group">
+                  <img src="image/kofi.png" alt="Ko-fi" class="w-5 h-5 object-contain group-hover:scale-110 transition-transform opacity-80 group-hover:opacity-100">
+                  <span data-i18n="footer.donationsBtn">Donations</span>
+                </a>
+
+                <button id="btn-privacy" onclick="openModal('privacy', this)" class="footer-btn group">
+                  <i data-lucide="shield-check" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                  <span data-i18n="footer.privacy">Privacy Policy</span>
+                </button>
+
+                <button id="btn-disclaimer" onclick="openModal('disclaimer', this)" class="footer-btn group">
+                  <i data-lucide="alert-circle" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                  <span data-i18n="footer.legalDisclaimer">Disclaimer</span>
+                </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Copyright Notice -->
+        <div class="text-center pt-8 border-t border-white/5 space-y-4 reveal-on-scroll">
+          <p data-i18n="footer.copyright" class="text-platinum-400 font-bold tracking-[0.2em] text-[10px] uppercase">
+            © 2026 Platinum+ Optimizer. All rights reserved.
+          </p>
+          <p data-i18n="footer.disclaimer"
+            class="text-[9px] leading-relaxed text-platinum-300/20 uppercase tracking-[0.3em] max-w-4xl mx-auto">
+            Use of this tool is at the user's sole risk. We are not responsible for any direct or indirect damage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FPS Counter Widget -->
+  <div id="fps-counter-widget"
+    class="fixed bottom-6 right-6 z-[9999] w-[72px] h-[28px] bg-[#0A101C]/80 backdrop-blur-md rounded-xl flex items-center px-2.5 border border-white/10 shadow-[0_0_15px_rgba(31,111,255,0.15)] pointer-events-none">
+    <div class="flex-none w-1.5 h-1.5 bg-electric-400 rounded-full mr-2"></div>
+    <div class="flex-1 flex items-baseline justify-end gap-1 leading-none">
+      <span id="fps-count" class="text-[13px] font-mono font-medium text-white tracking-tight">60</span>
+      <span class="text-[8px] text-platinum-400 uppercase tracking-widest font-bold">FPS</span>
+    </div>
+  </div>
+
+  <script>
+    // Immediate anti-FOUC restoration to prevent white screen
+    document.documentElement.style.visibility = 'visible';
+    document.documentElement.style.opacity = '1';
+  </script>
+
+  <!-- Google Translate Element & Scripts -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    (function() {
+      var saved = localStorage.getItem('platinum_lang');
+      if (saved && saved !== 'en') {
+        document.cookie = 'googtrans=/en/' + saved + '; path=/;';
+        var domain = window.location.hostname;
+        if (domain && domain !== 'localhost' && !domain.includes('127.0.0.1')) {
+          document.cookie = 'googtrans=/en/' + saved + '; path=/; domain=' + domain + ';';
+          document.cookie = 'googtrans=/en/' + saved + '; path=/; domain=.' + domain + ';';
+        }
+      }
+    })();
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- FLIP Lightbox Engine & App Scripts -->
+  <script src="flipEngine.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

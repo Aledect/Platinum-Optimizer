@@ -1,0 +1,1 @@
+﻿Modern Windows gaming services app used for Game Pass, game discovery, and gaming entitlement experiences.

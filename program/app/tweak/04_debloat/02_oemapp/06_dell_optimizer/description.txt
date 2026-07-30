@@ -1,0 +1,1 @@
+﻿Dell optimization utility for application performance, audio conferencing, network prioritization, and power behavior.

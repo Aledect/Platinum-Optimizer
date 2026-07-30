@@ -1,0 +1,1 @@
+﻿Eradicates all idle power state transitions (D3 and Fx) for the NVMe controller, ensuring the drive remains permanently in its highest operational power state to eliminate wake-up latency.

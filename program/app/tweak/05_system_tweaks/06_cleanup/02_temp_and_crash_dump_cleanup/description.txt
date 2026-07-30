@@ -1,0 +1,1 @@
+﻿Deletes Windows temp files, user temp files, crash dumps, minidumps, and memory dump files. Locked files are skipped.

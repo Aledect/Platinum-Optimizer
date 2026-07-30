@@ -1,0 +1,1 @@
+﻿This configuration disables kernel timer serialization to distribute timer expiration handling across all available processors. It also enables per-CPU clock tick scheduling and disables dynamic tick to maintain a continuous, high-performance timer state, preventing CPU 0 bottlenecks.

@@ -1,0 +1,1 @@
+Halts all automated background updates for the operating system, Microsoft Store applications, and the Microsoft Edge browser.

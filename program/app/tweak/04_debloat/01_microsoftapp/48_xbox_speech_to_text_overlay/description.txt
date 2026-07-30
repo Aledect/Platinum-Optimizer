@@ -1,0 +1,1 @@
+﻿Accessibility overlay that provides speech-to-text transcription for game chat and communication.

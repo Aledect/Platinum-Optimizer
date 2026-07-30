@@ -1,0 +1,10 @@
+program/**
+cloudflare_public/**
+node_modules/**
+.git/**
+.agents/**
+.codex/**
+CLOUDFLARE_DEPLOY.md
+wrangler.jsonc
+*.log
+*.ps1

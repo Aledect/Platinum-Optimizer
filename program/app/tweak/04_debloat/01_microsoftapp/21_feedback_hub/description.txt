@@ -1,0 +1,1 @@
+﻿Microsoft feedback collection application for diagnostics, suggestions, and Insider feedback.

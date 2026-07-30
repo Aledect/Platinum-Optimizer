@@ -1,0 +1,1 @@
+﻿Eradicates internal audio crash reporting, glitch logging, stream capture monitors, and health watchdog timers to prevent diagnostic CPU overhead.

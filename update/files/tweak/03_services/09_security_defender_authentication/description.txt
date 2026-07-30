@@ -1,0 +1,1 @@
+Completely disables Windows Defender real-time protection, smart card authentication, biometric logins, and cryptographic isolation services.

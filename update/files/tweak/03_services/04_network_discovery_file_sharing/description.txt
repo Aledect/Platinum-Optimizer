@@ -1,0 +1,1 @@
+Disables SMB file sharing, peer-to-peer networking protocols, local network discovery, and offline file synchronization.

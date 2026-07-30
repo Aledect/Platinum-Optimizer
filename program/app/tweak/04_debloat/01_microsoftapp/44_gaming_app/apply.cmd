@@ -1,0 +1,2 @@
+powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process | Where-Object { $_.Name -like '*GamingApp*' } | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *Microsoft.GamingApp* | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online | Where-Object { $_.PackageName -like '*Microsoft.GamingApp*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
+exit /b 0

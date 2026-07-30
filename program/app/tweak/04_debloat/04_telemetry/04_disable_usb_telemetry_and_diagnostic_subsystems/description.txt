@@ -1,0 +1,1 @@
+﻿Disables Customer Experience Improvement Program (CEIP), hardware verifiers, and live kernel reporting tied to the USB stack.

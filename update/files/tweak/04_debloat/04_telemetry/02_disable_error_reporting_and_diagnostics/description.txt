@@ -1,0 +1,1 @@
+﻿This configuration halts all automated background scans that check for memory faults, disk errors, and system crashes.

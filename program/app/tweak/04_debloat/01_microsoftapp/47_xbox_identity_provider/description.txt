@@ -1,0 +1,1 @@
+﻿Authentication broker for Xbox identity, game sign-in, and Microsoft gaming entitlements.

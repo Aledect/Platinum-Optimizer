@@ -1,0 +1,1 @@
+Disables spatial perception simulation, geolocation monitoring, screen capture services, and generic sensor data delivery.

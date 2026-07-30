@@ -1,0 +1,1 @@
+﻿This configuration aggressively tunes the Desktop Window Manager to prioritize direct hardware scanout, Multiplane Overlays (MPO), and Independent Flip (iFlip) modes while disabling visual bloat such as animations, shadows, and telemetry.

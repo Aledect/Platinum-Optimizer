@@ -1,0 +1,1 @@
+﻿Completely disables USB selective suspend, idle power states, and associated low-power features across the Plug and Play (PnP) manager to prevent peripheral wake-up latency.

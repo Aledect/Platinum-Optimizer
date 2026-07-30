@@ -1,0 +1,1 @@
+﻿Web search integration component that provides Bing-powered results and web suggestions from Windows search surfaces.

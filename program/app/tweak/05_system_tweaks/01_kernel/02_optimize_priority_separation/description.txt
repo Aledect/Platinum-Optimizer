@@ -1,0 +1,1 @@
+﻿This configuration precisely tunes the Windows preemptive scheduler to allocate the maximum possible processor time to foreground applications, such as games. It enforces short, variable quantum intervals to guarantee high responsiveness and completely disables dynamic priority decay so that the foreground performance boost remains locked and active.

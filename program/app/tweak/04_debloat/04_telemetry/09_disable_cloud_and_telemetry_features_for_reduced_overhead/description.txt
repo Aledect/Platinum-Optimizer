@@ -1,0 +1,1 @@
+﻿Turns off cloud-delivered protection, sample submission, MAPS reporting, and core telemetry to eliminate background network and data collection activity.

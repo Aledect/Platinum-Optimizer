@@ -1,0 +1,1 @@
+﻿This configuration aggressively disables dynamic power scaling, adaptive clocking, and sleep-state callbacks for the graphics card. By calculating and applying specific bitmask values to the registry, it forces the GPU to maintain maximum performance states at all times, preventing downclocking during idle moments.

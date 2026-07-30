@@ -1,0 +1,1 @@
+﻿This configuration activates aggressive preloading of data for both system boot sequences and individual program launches to minimize initial load delays.

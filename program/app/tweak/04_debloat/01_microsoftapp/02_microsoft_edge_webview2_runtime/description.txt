@@ -1,0 +1,1 @@
+﻿Embedded browser runtime used by WebView2-based applications, including Outlook, Teams, Office experiences, and many third-party desktop apps.

@@ -1,0 +1,1 @@
+Turns off automated disk defragmentation, Windows Search indexing, Superfetch (SysMain), background app moderation, and automated backup routines.

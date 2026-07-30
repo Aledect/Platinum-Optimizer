@@ -1,0 +1,1 @@
+Stops all Microsoft Hyper-V services, VirtualBox drivers, and container file systems to remove hypervisor overhead from the host OS.

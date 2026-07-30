@@ -1,0 +1,1 @@
+﻿Strips away internal driver debugging routines, hardware verification checks, and surprise removal logging to reduce CPU overhead on the USB stack.

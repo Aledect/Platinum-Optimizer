@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+*.log
+temp/
+tmp/
+.ds_store

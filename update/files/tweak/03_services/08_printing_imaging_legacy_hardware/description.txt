@@ -1,0 +1,1 @@
+Disables the print spooler, scanner imaging services, CD-ROM drivers, and legacy hardware detection to clear memory and driver overhead.

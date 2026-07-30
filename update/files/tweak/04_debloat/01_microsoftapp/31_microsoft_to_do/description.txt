@@ -1,0 +1,1 @@
+﻿Task and list management application synchronized with Microsoft accounts.

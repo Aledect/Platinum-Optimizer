@@ -1,0 +1,1 @@
+﻿This configuration comprehensively re-engineers NTFS, ReFS, and FAT file system behaviors to eliminate background processing overhead, disable legacy naming conventions, and strip away CPU-heavy cryptographic and compression tasks to maximize storage speed.

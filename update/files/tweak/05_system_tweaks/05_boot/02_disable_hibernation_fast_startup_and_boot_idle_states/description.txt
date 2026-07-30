@@ -1,0 +1,1 @@
+﻿Completely eradicates the Windows Hibernation (S4) power state, Fast Startup (Hiberboot), and processor idle states during boot to ensure the system always performs a clean, full initialization at maximum CPU performance.

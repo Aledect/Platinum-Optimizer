@@ -1,0 +1,1 @@
+Turns off all Bluetooth drivers, wireless network auto-configuration, mobile broadband, and portable device enumerators to stop hardware polling.

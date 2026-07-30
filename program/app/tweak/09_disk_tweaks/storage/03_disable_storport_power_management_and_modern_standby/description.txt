@@ -1,0 +1,1 @@
+﻿Eradicates all storage-level telemetry, high-resolution performance tracking, Event Tracing for Windows (ETW) limits, and live memory dump capabilities to eliminate diagnostic CPU overhead.

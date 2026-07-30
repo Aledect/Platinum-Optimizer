@@ -1,0 +1,1 @@
+﻿Adjusts foundational USB stack behaviors at the root controller level, modifying idle states, control transfer sizes, and transaction translator buffering mechanisms.

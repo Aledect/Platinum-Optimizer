@@ -1,0 +1,1 @@
+﻿Completely disables all OS-level suggestions, tips, promoted content, and Windows Spotlight features across the Start Menu, Lock Screen, Settings, and Action Center to eliminate background content delivery and reduce UI bloat.

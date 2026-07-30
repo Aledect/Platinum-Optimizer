@@ -1,0 +1,1 @@
+﻿Lenovo device management hub for updates, hardware settings, battery thresholds, diagnostics, and hotkey features.

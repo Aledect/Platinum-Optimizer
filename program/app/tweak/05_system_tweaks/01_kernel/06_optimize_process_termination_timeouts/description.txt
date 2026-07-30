@@ -1,0 +1,1 @@
+﻿This configuration aggressively reduces the waiting period the operating system uses before forcefully terminating unresponsive background services, console handlers, and graphical applications, while also bypassing the interactive prompt that blocks system shutdowns.

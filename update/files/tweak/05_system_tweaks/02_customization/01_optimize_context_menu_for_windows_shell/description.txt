@@ -1,0 +1,1 @@
+﻿This optimization deactivates all background processes and scheduled tasks responsible for managing physical and virtual printing operations.

@@ -1,0 +1,1 @@
+﻿HP onboarding and registration utility shown during first-run setup.

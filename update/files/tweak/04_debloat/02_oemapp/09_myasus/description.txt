@@ -1,0 +1,1 @@
+﻿ASUS device management app for driver updates, diagnostics, battery care, fan profiles, and support links.

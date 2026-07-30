@@ -1,0 +1,1 @@
+﻿Samsung device settings utility for battery protection, keyboard behavior, display modes, and OEM toggles.

@@ -1,0 +1,1 @@
+﻿Disables VBS, hypervisor layers, ELAM, and security isolation overhead for maximum bare-metal CPU performance.

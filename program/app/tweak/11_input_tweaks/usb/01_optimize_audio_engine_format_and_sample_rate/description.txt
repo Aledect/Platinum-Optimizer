@@ -1,0 +1,1 @@
+﻿Standardizes the shared-mode audio stream format to a highly efficient baseline, minimizing real-time resampling overhead and reducing audio processing latency.

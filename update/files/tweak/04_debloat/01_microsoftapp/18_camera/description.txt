@@ -1,0 +1,1 @@
+﻿Built-in camera capture application for photos and video recording.

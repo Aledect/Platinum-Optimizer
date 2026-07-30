@@ -1,0 +1,1 @@
+﻿Completely disables the idle detection mechanism for USB audio drivers, preventing audio interfaces, DACs, and headsets from transitioning into low-power sleep states (D3) after a period of inactivity.

@@ -1,0 +1,1 @@
+﻿Eradicates all touch-based physics, pen gestures, visual feedback animations, predictive text engines, and tablet mode transitions to eliminate background input processing overhead.

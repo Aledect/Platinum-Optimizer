@@ -1,0 +1,1 @@
+﻿Eradicates selective suspend UI interfaces, idle timeouts, and artificial debounce delays to ensure USB hubs and connected peripherals remain instantly responsive.

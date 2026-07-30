@@ -1,0 +1,1 @@
+﻿Default Windows photo viewer and image organization application.

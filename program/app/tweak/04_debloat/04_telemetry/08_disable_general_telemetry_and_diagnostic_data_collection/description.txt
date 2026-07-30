@@ -1,0 +1,1 @@
+﻿Completely disables Windows diagnostic telemetry, inventory collection, app launch tracking, and the Customer Experience Improvement Program (SQM) to prevent background data transmission and free up system resources.

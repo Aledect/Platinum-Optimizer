@@ -1,0 +1,1 @@
+﻿Built-in calculator application for standard, scientific, programmer, and conversion calculations.

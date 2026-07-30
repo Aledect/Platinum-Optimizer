@@ -1,0 +1,1 @@
+﻿This optimization focuses on modifying the Windows OS kernel's interaction with the NVIDIA hardware layer, bypassing useless legacy registry strings to directly lower system latency and CPU overhead. The process applies four verified mitigations:
