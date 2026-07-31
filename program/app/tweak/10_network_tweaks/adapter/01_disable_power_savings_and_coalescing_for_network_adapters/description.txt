@@ -1,1 +1,0 @@
-﻿Disables all network adapter power-saving states, Energy Efficient Ethernet (EEE), Wake on LAN (WoL), and packet coalescing to guarantee absolute minimum network latency and maximum throughput.

@@ -1,1 +1,0 @@
-﻿Stops the OS from automatically scanning, downloading, and preparing updates in the background.

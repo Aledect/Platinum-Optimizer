@@ -1,1 +1,0 @@
-﻿Lenovo hotkey and on-screen display utility for function-key behavior and hardware toggles.

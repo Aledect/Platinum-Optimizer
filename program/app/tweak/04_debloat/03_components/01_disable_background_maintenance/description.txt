@@ -1,1 +1,0 @@
-﻿Turns off automated defragmentation, registry backups, and background sync to maximize disk I/O performance.

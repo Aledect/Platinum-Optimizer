@@ -1,1 +1,0 @@
-﻿This configuration aggressively tunes the core parameters of the Multimedia Class Scheduler Service (MMCSS). It maximizes the CPU time allocated to high-priority multimedia and gaming threads, disables network packet throttling during media playback, and tightens the scheduling cycles to the lowest possible latency threshold.

@@ -1,1 +1,0 @@
-﻿Personal Microsoft Teams client for chat, calling, meetings, and consumer communication experiences.

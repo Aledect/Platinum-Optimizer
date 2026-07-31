@@ -1,1 +1,0 @@
-﻿Supporting overlay component for Xbox Game Bar plugin rendering and game integration.

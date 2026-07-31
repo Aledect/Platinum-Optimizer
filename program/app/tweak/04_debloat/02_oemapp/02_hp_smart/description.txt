@@ -1,1 +1,0 @@
-﻿HP printer and scanner companion app for setup, scanning, ink status, and device management.

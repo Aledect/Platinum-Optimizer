@@ -1,1 +1,0 @@
-﻿System-wide deactivation of security mechanisms designed to intercept and prevent memory corruption and control-flow hijacking, drastically reducing background CPU validation overhead.

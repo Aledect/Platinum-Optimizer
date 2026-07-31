@@ -1,1 +1,0 @@
-﻿Eliminates artificial background input coalescing to ensure maximum polling rate retention and absolute minimum latency for all mouse listeners.

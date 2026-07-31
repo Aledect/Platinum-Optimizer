@@ -1,1 +1,0 @@
-﻿Developer-oriented dashboard for environment configuration, widgets, and development project management.

@@ -1,1 +1,0 @@
-﻿Disables Search Indexer, Bing web integration, and dynamic highlights to reduce disk I/O and network usage.

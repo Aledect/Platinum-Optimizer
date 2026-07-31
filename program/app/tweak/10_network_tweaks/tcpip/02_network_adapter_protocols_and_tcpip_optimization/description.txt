@@ -1,1 +1,0 @@
-Streamlines the Windows network stack to reduce broadcast chatter, lower CPU overhead, and optimize packet processing.

@@ -1,1 +1,0 @@
-﻿This configuration disables diagnostic heap usage logging within the Desktop Window Manager (DWM) to eliminate background telemetry overhead and streamline system resource utilization.

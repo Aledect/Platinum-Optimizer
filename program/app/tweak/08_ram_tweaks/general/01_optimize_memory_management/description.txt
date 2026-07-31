@@ -1,1 +1,0 @@
-﻿This configuration optimizes the CPU scheduling pipeline, forces the use of modern Advanced Programmable Interrupt Controllers (APIC), and disables power-saving timer coalescing to ensure the lowest possible input and processing latency.

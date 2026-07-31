@@ -1,1 +1,0 @@
-﻿Eradicates all peripheral wake capabilities, disables Connected Standby input polling, and prevents USB devices from triggering system resume events to eliminate background interrupt monitoring.

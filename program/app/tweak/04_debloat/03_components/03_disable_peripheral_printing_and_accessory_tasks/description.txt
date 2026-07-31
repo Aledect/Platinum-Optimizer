@@ -1,1 +1,0 @@
-﻿Turns off background tasks for printer queue cleanup, offline maps, and speech model downloads.

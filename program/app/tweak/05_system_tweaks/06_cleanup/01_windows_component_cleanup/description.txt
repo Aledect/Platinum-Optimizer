@@ -1,1 +1,0 @@
-﻿Cleans Windows component store and safe Disk Cleanup categories. Disk Cleanup window may open. Reboot after completion.

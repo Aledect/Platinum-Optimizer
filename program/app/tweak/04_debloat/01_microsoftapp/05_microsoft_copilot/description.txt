@@ -1,1 +1,0 @@
-﻿Windows Copilot assistant experience providing AI-assisted actions, answers, and system integration entry points.

@@ -1,2 +1,0 @@
-powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -Name *MSPaint* -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *Microsoft.MSPaint* -ErrorAction SilentlyContinue | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*Microsoft.MSPaint*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
-exit /b 0

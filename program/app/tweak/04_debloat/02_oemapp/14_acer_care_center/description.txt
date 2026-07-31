@@ -1,1 +1,0 @@
-﻿Acer support utility for recovery, driver updates, diagnostics, and system information.

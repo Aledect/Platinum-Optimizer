@@ -1,1 +1,0 @@
-﻿HP support companion for driver scans, diagnostics, warranty information, and support cases.

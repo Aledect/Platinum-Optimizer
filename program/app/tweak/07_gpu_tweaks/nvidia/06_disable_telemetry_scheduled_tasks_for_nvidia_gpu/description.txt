@@ -1,1 +1,0 @@
-﻿This configuration recursively disables specific background scheduled tasks created by the graphics driver. By stopping these automated crash reporters and data collection monitors from executing at startup or on recurring timers, the system avoids unnecessary background processing overhead and potential network polling.

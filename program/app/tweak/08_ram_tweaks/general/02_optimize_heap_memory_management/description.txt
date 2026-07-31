@@ -1,1 +1,0 @@
-﻿This configuration explicitly defines the Windows NT heap allocation thresholds to their optimal boundaries and disables the global Segment Heap. It ensures maximum compatibility and performance for traditional desktop applications and games by preventing modern memory management overhead and disabling invasive heap debugging features.

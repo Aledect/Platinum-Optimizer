@@ -1,1 +1,0 @@
-﻿Built-in UWP mail and calendar client for email, calendar, and account synchronization.

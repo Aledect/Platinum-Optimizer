@@ -1,1 +1,0 @@
-﻿Blocks HTTP printing, automatic print driver downloads, and background network printer discovery.

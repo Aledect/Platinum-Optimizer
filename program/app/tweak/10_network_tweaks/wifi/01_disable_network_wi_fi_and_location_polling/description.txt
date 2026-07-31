@@ -1,1 +1,0 @@
-﻿This optimization disables background routines responsible for gathering user metrics, application compatibility data, and hardware usage statistics to send to Microsoft.

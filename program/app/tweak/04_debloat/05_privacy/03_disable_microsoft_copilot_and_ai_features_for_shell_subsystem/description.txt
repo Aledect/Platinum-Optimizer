@@ -1,1 +1,0 @@
-﻿This optimization completely deactivates the integrated Windows Copilot AI, its associated background telemetry, and generative AI features embedded within native applications. By enforcing strict system policies and modifying shell registry keys, it prevents the OS from allocating resources to web-based AI sidebars and automated feature installations.

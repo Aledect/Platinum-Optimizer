@@ -1,1 +1,0 @@
-﻿Finance application for market data, watchlists, and financial news.

@@ -1,2 +1,0 @@
-powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -Name *People* -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *Microsoft.People* -ErrorAction SilentlyContinue | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*Microsoft.People*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
-exit /b 0

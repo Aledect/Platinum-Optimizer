@@ -1,1 +1,0 @@
-Completely disabling the Bluetooth stack and drivers

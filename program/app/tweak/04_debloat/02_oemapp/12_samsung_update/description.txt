@@ -1,1 +1,0 @@
-﻿Samsung update utility for OEM driver, firmware, and application update discovery.
