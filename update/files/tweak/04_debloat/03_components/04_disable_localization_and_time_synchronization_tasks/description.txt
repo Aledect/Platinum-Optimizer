@@ -1,1 +1,0 @@
-﻿Prevents the system from automatically syncing language resources and network time in the background.

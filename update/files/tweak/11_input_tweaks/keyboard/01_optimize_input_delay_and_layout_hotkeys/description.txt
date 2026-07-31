@@ -1,1 +1,0 @@
-﻿Eliminates the initial keystroke repetition delay, maintains maximum repetition speed, adjusts cursor visual feedback, and completely unbinds background language switching shortcuts to prevent accidental interruptions.

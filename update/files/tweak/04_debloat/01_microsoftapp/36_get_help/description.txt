@@ -1,1 +1,0 @@
-﻿Microsoft support and troubleshooting launcher that connects users to help articles and diagnostic flows.

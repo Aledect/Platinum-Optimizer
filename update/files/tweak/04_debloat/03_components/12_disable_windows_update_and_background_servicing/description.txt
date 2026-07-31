@@ -1,1 +1,0 @@
-﻿Halts Windows Update and background servicing threads (TiWorker.exe) to eliminate CPU spikes and network latency.

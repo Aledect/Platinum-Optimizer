@@ -1,1 +1,0 @@
-﻿Samsung device synchronization utility for notifications, clipboard, hotspot, and file sharing.

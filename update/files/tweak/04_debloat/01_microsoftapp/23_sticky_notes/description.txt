@@ -1,1 +1,0 @@
-﻿Desktop note application for quick text notes and cloud synchronization through Microsoft accounts.

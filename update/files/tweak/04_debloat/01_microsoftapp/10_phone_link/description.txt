@@ -1,1 +1,0 @@
-﻿Phone Link application that synchronizes Android or iOS notifications, messages, calls, and photos with Windows.

@@ -1,1 +1,0 @@
-﻿Bing-powered mapping application for search, directions, and saved places.

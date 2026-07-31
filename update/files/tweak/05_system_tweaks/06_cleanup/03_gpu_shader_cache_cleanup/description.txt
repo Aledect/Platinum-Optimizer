@@ -1,1 +1,0 @@
-﻿Cleans DirectX, NVIDIA, AMD, and Intel shader caches. Games may recompile shaders on next launch.

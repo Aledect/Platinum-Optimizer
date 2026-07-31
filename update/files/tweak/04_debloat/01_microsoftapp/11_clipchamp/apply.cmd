@@ -1,2 +1,0 @@
-powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -Name *Clipchamp* -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *Clipchamp* -ErrorAction SilentlyContinue | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*Clipchamp*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
-exit /b 0

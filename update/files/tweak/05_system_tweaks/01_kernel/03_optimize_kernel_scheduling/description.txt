@@ -1,1 +1,0 @@
-﻿This configuration comprehensively overhauls the core Windows kernel scheduling mechanics. It disables Dynamic Fair Share Scheduling (DFSS), neutralizes core parking requests, disables invasive security mitigations, and optimizes Deferred Procedure Call (DPC) thresholds to guarantee absolute maximum processor availability for foreground gaming workloads.

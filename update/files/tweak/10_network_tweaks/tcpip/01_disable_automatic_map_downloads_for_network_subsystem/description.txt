@@ -1,1 +1,0 @@
-﻿This optimization completely halts background data transmission and disk I/O initiated by the operating system's location and cartography services. By overriding default update behaviors and disabling the core manager service, it prevents unsolicited bandwidth consumption and unexpected system resource allocation.

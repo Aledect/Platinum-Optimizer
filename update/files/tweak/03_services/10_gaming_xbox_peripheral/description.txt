@@ -1,1 +1,0 @@
-Removes background bloatware from Xbox Live, Epic Games, Logitech G HUB, SteelSeries, NVIDIA containers, and third-party search tools.

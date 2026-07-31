@@ -1,1 +1,0 @@
-﻿Disables all forms of selective suspend, link power management, and latency tolerance messaging to ensure USB host controllers and connected devices remain in a continuous state of maximum power readiness.

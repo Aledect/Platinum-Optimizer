@@ -1,2 +1,0 @@
-powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "Get-Process -ErrorAction SilentlyContinue | Where-Object { $_.Path -like '*3DBuilder*' -or $_.Name -like '*3DBuilder*' } | Stop-Process -Force -ErrorAction SilentlyContinue; Get-AppxPackage -AllUsers *3DBuilder* | Remove-AppxPackage -AllUsers -ErrorAction SilentlyContinue; Get-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue | Where-Object { $_.PackageName -like '*3DBuilder*' } | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue"
-exit /b 0

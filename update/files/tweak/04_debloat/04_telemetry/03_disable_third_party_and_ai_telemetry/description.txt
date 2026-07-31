@@ -1,1 +1,0 @@
-﻿Stops data collection and background monitoring tasks injected by Microsoft Office, NVIDIA drivers, and Windows AI (Recall) components.

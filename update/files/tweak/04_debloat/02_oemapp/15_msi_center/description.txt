@@ -1,1 +1,0 @@
-﻿MSI system management utility for performance profiles, monitoring, RGB control, and device tuning.

@@ -1,1 +1,0 @@
-﻿Dell software delivery service used to download and install purchased Dell software entitlements.

@@ -1,1 +1,0 @@
-﻿Reconfigures the core Windows Audio Device Graph (`audiodg.exe`) and Audio Service to utilize real-time memory heaps, maximum CPU allocation, and aggressive thread scheduling for absolute minimum audio latency.

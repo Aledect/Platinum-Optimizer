@@ -1,1 +1,0 @@
-﻿Disables Print Spooler and background printer services to reduce CPU context switching and DPC latency.

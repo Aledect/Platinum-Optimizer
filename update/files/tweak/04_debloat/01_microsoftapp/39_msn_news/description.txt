@@ -1,1 +1,0 @@
-﻿News aggregator application presenting headlines and personalized content feeds.

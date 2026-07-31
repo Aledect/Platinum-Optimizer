@@ -1,1 +1,0 @@
-﻿Consumer Skype communication application for chat, voice, and video calls.

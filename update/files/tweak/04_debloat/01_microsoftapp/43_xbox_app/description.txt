@@ -1,1 +1,0 @@
-﻿Xbox application for PC Game Pass, game library, social features, and game installation management.

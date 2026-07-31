@@ -1,1 +1,0 @@
-﻿This optimization turns off internal driver adjustments for scanout composition and post-processing engine behaviors, eliminating unnecessary buffer allocations and background rendering overhead.

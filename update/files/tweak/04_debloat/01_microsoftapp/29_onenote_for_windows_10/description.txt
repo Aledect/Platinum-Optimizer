@@ -1,1 +1,0 @@
-﻿UWP OneNote client for notebooks, section organization, and ink-enabled note taking.

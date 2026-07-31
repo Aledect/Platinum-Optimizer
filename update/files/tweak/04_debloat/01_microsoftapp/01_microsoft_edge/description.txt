@@ -1,1 +1,0 @@
-﻿Chromium-based Microsoft Edge browser integrated into Windows for web browsing, PDF rendering, web platform components, and several OS web experiences.

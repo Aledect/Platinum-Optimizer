@@ -1,1 +1,0 @@
-﻿3D-oriented paint application for basic 3D models, stickers, and image editing.

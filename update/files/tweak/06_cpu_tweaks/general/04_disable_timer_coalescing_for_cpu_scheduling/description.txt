@@ -1,1 +1,0 @@
-﻿Disables the energy-saving feature that intentionally reduces software timer precision, preventing the system from artificially delaying and grouping process wake-ups to save power.

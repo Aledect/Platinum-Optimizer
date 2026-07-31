@@ -1,1 +1,0 @@
-﻿This optimization drastically reduces the performance overhead of early boot event tracing and background logging mechanisms. By reconfiguring buffer allocations, altering the timestamp clock type, and disabling real-time disk persistence, it prevents the operating system from wasting CPU cycles and disk I/O on diagnostic telemetry during boot and normal operation.

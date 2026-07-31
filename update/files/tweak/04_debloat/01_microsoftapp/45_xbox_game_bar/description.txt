@@ -1,1 +1,0 @@
-﻿Game overlay providing capture, performance, audio, social, and widget functionality during gameplay.

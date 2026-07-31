@@ -1,1 +1,0 @@
-﻿Optional. Stops Windows Update services temporarily and deletes downloaded update files. Does not uninstall installed updates. Use only if Windows Update is stuck or corrupted.

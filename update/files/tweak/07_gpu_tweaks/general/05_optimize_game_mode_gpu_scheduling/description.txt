@@ -1,1 +1,0 @@
-﻿This configuration aggressively tunes the Windows Game Mode Resource Manager to prioritize foreground gaming applications. It maximizes the graphics memory budget allocated to the game, minimizes the GPU scheduling yield time given to background processes, and enforces CPU set isolation to prevent cache thrashing.

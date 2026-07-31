@@ -1,1 +1,0 @@
-﻿Hides all Defender notifications and disables enhanced reporting to prevent UI and background distractions.

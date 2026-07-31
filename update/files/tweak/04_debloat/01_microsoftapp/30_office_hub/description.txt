@@ -1,1 +1,0 @@
-﻿Office dashboard application that surfaces recent documents, templates, and Office app launch points.

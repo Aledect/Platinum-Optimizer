@@ -1,1 +1,0 @@
-Strips out all internal hub debugging, error logging, hard resets, and extended validation checks to reduce CPU overhead on the system bus.

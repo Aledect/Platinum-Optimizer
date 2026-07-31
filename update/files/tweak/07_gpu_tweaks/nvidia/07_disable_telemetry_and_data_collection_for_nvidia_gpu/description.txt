@@ -1,1 +1,0 @@
-﻿This configuration comprehensively disables the NVIDIA driver's background telemetry and data collection mechanisms. By explicitly setting opt-out preferences and neutralizing specific tracking identifiers within the registry, it prevents the driver from silently gathering and transmitting system hardware configurations and usage statistics over the network.

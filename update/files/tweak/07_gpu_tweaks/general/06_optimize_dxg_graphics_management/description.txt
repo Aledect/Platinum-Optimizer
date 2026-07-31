@@ -1,1 +1,0 @@
-﻿This configuration aggressively tunes the core DirectX Graphics Kernel (`dxgkrnl.sys`) by completely disabling Content Adaptive Backlight Control (CABC), neutralizing hardware power state management, disabling Timeout Detection and Recovery (TDR), and forcing Hardware-Accelerated GPU Scheduling (HAGS). It prioritizes raw throughput over power efficiency and diagnostic telemetry.

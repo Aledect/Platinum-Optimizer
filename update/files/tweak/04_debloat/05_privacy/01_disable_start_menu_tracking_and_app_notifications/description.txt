@@ -1,1 +1,0 @@
-﻿Turns off user tracking, hides frequently and recently used apps, and disables new application notifications in the Start menu to streamline the Windows Explorer shell.

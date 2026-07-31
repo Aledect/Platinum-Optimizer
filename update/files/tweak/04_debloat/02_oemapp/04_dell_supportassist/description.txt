@@ -1,1 +1,0 @@
-﻿Dell support utility for diagnostics, driver detection, hardware scans, and support case creation.
